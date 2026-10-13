@@ -14,6 +14,7 @@
     <!-- Estilos CSS: Base Global (styles.css) y Estilos Específicos de la Carta / Menú -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/menu.css">
+    <script src="js/carrusel.js" defer></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
             <a href="menu.html" class="active">CARTA</a>
             <a href="reserva.html">RESERVAS</a>
             <a href="index.html#contacto">CONTACTO</a>
-            <a href="reserva.html" class="btn btn-nav-mobile">RESERVAR</a>
+            <a href="reserva.html" class="btn btn-nav-mobile btn-reserve">RESERVAR</a>
         </nav>
     </header>
 
@@ -104,7 +105,7 @@
             <div class="carousel-container">
 
                 <!-- Pista deslizable -->
-                <div class="carousel-track">
+                <div class="carousel-track" id="platos-track" tabindex="0" aria-label="Platos fuertes">
 
                     <!-- PÁGINA 1: Platos 1, 2 y 3 -->
                     <div class="carousel-page" id="platos-pag-1">
@@ -238,7 +239,12 @@
                     </div>
 
                 </div>
-
+                <div class="carousel-mobile-controls">
+                    <button type="button" class="carousel-prev" aria-label="Plato anterior" aria-controls="platos-track">&#10094;</button>
+                    <span class="carousel-status" role="status" aria-live="polite">Plato 1 de 9</span>
+                    <button type="button" class="carousel-next" aria-label="Plato siguiente" aria-controls="platos-track">&#10095;</button>
+                </div>
+                <p class="carousel-mobile-hint">Desliza para descubrir los platos o usa las flechas.</p>
             </div>
         </div>
 
@@ -361,21 +367,6 @@
 
     <!-- Script para navegación fluida y encuadre exacto del carrusel -->
     <script>
-        document.querySelectorAll('.carousel-arrow').forEach(arrow => {
-            arrow.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetPage = document.getElementById(targetId);
-                const track = document.querySelector('.carousel-track');
-                if (targetPage && track) {
-                    track.scrollTo({
-                        left: targetPage.offsetLeft,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
         // Cierre automático del menú móvil al hacer clic en un enlace
         document.addEventListener('DOMContentLoaded', function () {
             const navToggle = document.getElementById('nav-toggle');

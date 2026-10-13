@@ -559,3 +559,29 @@ section[id],
         transform: translateY(0);
     }
 }
+
+/* Valores compartidos para reservas y separación de secciones */
+:root {
+    --reserve-color: #1e7e4e;
+    --reserve-hover: #155c39;
+    --section-space: 80px;
+    --section-heading-gap: 38px;
+}
+.btn.btn-reserve,
+.nav-links .btn.btn-reserve {
+    background-color: var(--reserve-color);
+    color: #fff;
+    border-radius: 7px;
+    min-height: 44px;
+}
+.btn.btn-reserve:hover,
+.nav-links .btn.btn-reserve:hover {
+    background-color: var(--reserve-hover);
+}
+.btn.btn-reserve:focus-visible {
+    outline: 3px solid #e5b382;
+    outline-offset: 4px;
+}
+@media (max-width: 768px) {
+    :root { --section-space: 50px; --section-heading-gap: 28px; }
+}

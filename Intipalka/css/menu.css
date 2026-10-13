@@ -30,7 +30,7 @@
 }
 
 .menu-category {
-    margin-bottom: 50px;
+    margin-bottom: var(--section-space);
 }
 
 .category-title {
@@ -38,13 +38,13 @@
     color: #452f2f;
     border-bottom: 2px solid #452f2f;
     padding-bottom: 8px;
-    margin-bottom: 25px;
+    margin-bottom: var(--section-heading-gap);
 }
 
 /* Cuadrícula estándar para platos (Entradas y Postres) */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
     gap: 25px;
 }
 
@@ -145,14 +145,16 @@
 
 .dish-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 220px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f6f2ee;
     display: block;
     transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .dish-card:hover img {
-    transform: scale(1.08);
+    transform: none;
 }
 
 .dish-info {
@@ -160,13 +162,14 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .dish-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 10px;
 }
@@ -194,15 +197,59 @@
 /* --------------------------------------------------------------------------
    5. RESPONSIVIDAD ESPECÍFICA DE LA CARTA
    -------------------------------------------------------------------------- */
+.carousel-mobile-controls, .carousel-mobile-hint { display: none; }
+.carousel-track:focus-visible, .carousel-arrow:focus-visible {
+    outline: 3px solid #85182a;
+    outline-offset: -3px;
+}
 @media (max-width: 768px) {
-    .carousel-page {
-        grid-template-columns: 1fr;
-        padding: 15px 40px;
+    .carousel-track {
+        gap: 16px;
+        padding: 12px 16px;
+        scroll-padding-inline: 16px;
     }
-
-    .carousel-arrow {
-        width: 38px;
-        height: 38px;
-        font-size: 1.1em;
+    .carousel-page { display: contents; }
+    .carousel-track .dish-card {
+        flex: 0 0 100%;
+        min-width: 0;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
     }
+    .carousel-arrow { display: none; }
+    .carousel-mobile-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 12px;
+    }
+    .carousel-mobile-controls button {
+        width: 44px;
+        height: 44px;
+        border: 0;
+        border-radius: 50%;
+        background: #3b2225;
+        color: #fff;
+        font-size: 1.15rem;
+        cursor: pointer;
+    }
+    .carousel-mobile-controls button:disabled { opacity: .4; cursor: default; }
+    .carousel-mobile-controls button:focus-visible {
+        outline: 3px solid #85182a;
+        outline-offset: 3px;
+    }
+    .carousel-status { font-size: .85rem; color: #3b2225; }
+    .carousel-mobile-hint {
+        display: block;
+        text-align: center;
+        font-size: .8rem;
+        line-height: 1.6;
+        color: #6f6264;
+        margin: 12px 16px 0;
+    }
+    .dish-card:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .carousel-track { scroll-behavior: auto; }
+    .dish-card, .dish-card img, .carousel-arrow { transition: none; }
 }

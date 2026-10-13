@@ -14,6 +14,7 @@
     <!-- Estilos CSS: Base Global (styles.css) y Estilos Específicos de Inicio -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contacto.css">
     <script src="js/validacion.js" defer></script>
 </head>
 
@@ -41,7 +42,7 @@
             <a href="#testimonios">OPINIONES</a>
             <a href="menu.html">CARTA</a>
             <a href="#contacto">CONTACTO</a>
-            <a href="reserva.html" class="btn btn-nav-mobile">RESERVAR</a>
+            <a href="reserva.html" class="btn btn-nav-mobile btn-reserve">RESERVAR</a>
         </nav>
     </header>
 
@@ -57,7 +58,7 @@
                 Intipalka, del Hotel Viñas Queirolo. Hemos creado cada plato para despertar en nuestros comensales
                 el placer de disfrutar un mundo de sensaciones únicas.
             </p>
-            <a href="reserva.html" class="btn btn-gold">RESERVAR MESA</a>
+            <a href="reserva.html" class="btn btn-gold btn-reserve">RESERVAR MESA</a>
         </div>
     </main>
 
@@ -222,71 +223,56 @@
     </section>
 
     <!-- Sección de Contacto -->
-    <section class="contact-section" id="contacto">
+    <section class="contact-section" id="contacto" aria-labelledby="contact-title">
         <div class="contact-header">
-            <span class="section-subtitle">COMUNÍCATE CON NOSOTROS</span>
-            <h2 class="section-title">Contacto y Horarios</h2>
+            <span class="section-subtitle">Estamos para ayudarte</span>
+            <h2 class="section-title" id="contact-title">Conversemos sobre tu próxima visita</h2>
+            <p>Consulta por nuestros platos, ambientes o una ocasión especial.</p>
         </div>
         <div class="contact-content">
             <div class="contact-form-container">
+                <h3>Escríbenos</h3>
+                <p class="contact-intro">Cuéntanos cómo podemos ayudarte.</p>
                 <form class="contact-form">
                     <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" autocomplete="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" autocomplete="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <label for="message">¿En qué podemos ayudarte?</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Escribe aquí tu consulta..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-dark">ENVIAR MENSAJE</button>
+                    <button type="submit" class="btn btn-dark">Enviar mensaje <span aria-hidden="true">↗</span></button>
+                    <p class="contact-demo-note">Formulario de demostración: los mensajes no se envían.</p>
                 </form>
             </div>
             <div class="contact-schedule-container">
+                <div class="contact-schedule-heading">
+                    <img src="assets/icons/reloj.svg" alt="" width="28" height="28">
+                    <h3>Planifica tu visita</h3>
+                </div>
+                <p class="contact-schedule-intro">Te esperamos en el Valle del Sol.</p>
                 <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Día</th>
-                            <th>Horario</th>
-                        </tr>
-                    </thead>
+                    <caption>Horario de atención</caption>
+                    <thead><tr><th scope="col">Día</th><th scope="col">Horario</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td>Lunes</td>
-                            <td>8:00 am - 5:30 pm</td>
-                        </tr>
-                        <tr>
-                            <td>Martes</td>
-                            <td>8:00 am - 5:30 pm</td>
-                        </tr>
-                        <tr>
-                            <td>Miércoles</td>
-                            <td>8:00 am - 5:30 pm</td>
-                        </tr>
-                        <tr>
-                            <td>Jueves</td>
-                            <td>8:00 am - 5:30 pm</td>
-                        </tr>
-                        <tr>
-                            <td>Viernes</td>
-                            <td>8:00 am - 5:30 pm</td>
-                        </tr>
-                        <tr>
-                            <td>Sábado</td>
-                            <td>9:00 am - 1:00 pm</td>
-                        </tr>
-                        <tr>
-                            <td>Domingo</td>
-                            <td>Cerrado</td>
-                        </tr>
+                        <tr><th scope="row">Lunes a viernes</th><td>8:00 am – 5:30 pm</td></tr>
+                        <tr><th scope="row">Sábado</th><td>9:00 am – 1:00 pm</td></tr>
+                        <tr><th scope="row">Domingo</th><td><span class="contact-closed">Cerrado</span></td></tr>
                     </tbody>
                 </table>
+                <div class="contact-location">
+                    <span>Encuéntranos en Ica</span>
+                    <p>Carretera San José de los Molinos,<br>Km 11, Los Molinos, Ica – Perú</p>
+                    <a href="tel:+51965397086">Llámanos: (+51) 965 397 086</a>
+                </div>
+                <a href="reserva.html" class="btn btn-reserve contact-reserve-link">Reservar una mesa <span aria-hidden="true">↗</span></a>
             </div>
         </div>
-
     </section>
 
     <!-- Pie de página (Footer) -->

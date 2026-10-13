@@ -906,3 +906,11 @@
         font-size: 1.05em;
     }
 }
+
+/* Ritmo común entre las secciones de contenido */
+.history-section, .gastronomy-section, .wine-tour-section, .testimonials-section {
+    padding-block: var(--section-space);
+}
+.gastronomy-header, .testimonials-header {
+    margin-bottom: var(--section-heading-gap);
+}
