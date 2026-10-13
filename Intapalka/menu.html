@@ -213,7 +213,7 @@
                         </div>
 
                         <div class="dish-card">
-                            <img src="assets/images/lomo-saltado-en-salsa.jpg" alt="Linguini a la Huancaína con Lomo">
+                            <img src="assets/images/linguini.jpg" alt="Linguini a la Huancaína con Lomo">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Linguini a la Huancaína con Lomo</h3>
@@ -225,7 +225,7 @@
                         </div>
 
                         <div class="dish-card">
-                            <img src="assets/images/paella.jpg" alt="Calamares Crocantes al Pisco">
+                            <img src="assets/images/calamar.jpg" alt="Calamares Crocantes al Pisco">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Calamares Crocantes al Pisco</h3>
@@ -373,16 +373,21 @@
                         behavior: 'smooth'
                     });
                 }
-                // Cierre automático del menú móvil al hacer clic en un enlace
-                const navToggle = document.getElementById('nav-toggle');
-                const navLinks = document.querySelectorAll('.nav-links a');
-                if (navToggle) {
-                    navLinks.forEach(link => {
-                        link.addEventListener('click', () => {
-                            navToggle.checked = false;
-                        });
+            });
+        });
+
+        // Cierre automático del menú móvil al hacer clic en un enlace
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.getElementById('nav-toggle');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            if (navToggle) {
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navToggle.checked = false;
                     });
-                }
+                });
+            }
+        });
     </script>
 </body>
 
