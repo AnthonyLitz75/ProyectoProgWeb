@@ -246,13 +246,19 @@
   border-bottom: 0;
 }
 
-.contact-section { padding-block: var(--section-space); }
-.contact-header { margin-bottom: var(--section-heading-gap); }
-.contact-reserve-link.btn {
-    margin-top: auto;
-    padding: 14px 18px;
-    text-transform: none;
-    letter-spacing: .3px;
-    color: #fff;
+.contact-section {
+  padding-block: var(--section-space);
 }
-.contact-location { margin-bottom: 24px; }
+.contact-header {
+  margin-bottom: var(--section-heading-gap);
+}
+.contact-reserve-link.btn {
+  margin-top: auto;
+  padding: 14px 18px;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+.contact-location {
+  margin-bottom: 24px;
+}
