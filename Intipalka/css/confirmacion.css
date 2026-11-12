@@ -112,7 +112,113 @@
 }
 
 /* --------------------------------------------------------------------------
-   4. RESPONSIVIDAD ESPECÍFICA
+   4. TICKET DINÁMICO DE RESERVACIÓN
+   -------------------------------------------------------------------------- */
+.reservation-ticket {
+  background: #ffffff;
+  border: 1.5px solid #d8cfc4;
+  border-radius: 12px;
+  max-width: 620px;
+  margin: 30px auto 35px auto;
+  padding: 28px 30px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(69, 47, 47, 0.08);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.reservation-ticket::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #85182a, #d4af37);
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #d8cfc4;
+}
+
+.ticket-brand .ticket-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #888888;
+  text-transform: uppercase;
+}
+
+.ticket-code {
+  margin: 4px 0 0 0;
+  font-family: "Montserrat", monospace, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #85182a;
+  letter-spacing: 0.05em;
+}
+
+.ticket-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #fbf6ec;
+  color: #b27a00;
+  border: 1px solid #d4af37;
+}
+
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 24px;
+}
+
+.ticket-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-item-label {
+  font-size: 0.78rem;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 3px;
+}
+
+.ticket-item-value {
+  font-size: 0.95rem;
+  color: #3b2225;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.ticket-notes {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eee9e0;
+}
+
+.ticket-notes p {
+  margin: 4px 0 0 0;
+  font-style: italic;
+  color: #555555;
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. RESPONSIVIDAD ESPECÍFICA
    -------------------------------------------------------------------------- */
 @media (max-width: 600px) {
   .confirmation-card {
@@ -130,5 +236,14 @@
   .confirmation-buttons .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .ticket-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .reservation-ticket {
+    padding: 20px 18px;
   }
 }

@@ -13,6 +13,7 @@
     <!-- Estilos CSS: Base Global (styles.css) y Estilos Específicos de Confirmación -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/confirmacion.css">
+    <script src="js/confirmacion.js" defer></script>
 </head>
 
 <body>
@@ -52,13 +53,54 @@
             <div class="confirmation-icon">✓</div>
 
             <span class="confirmation-subtitle">¡SOLICITUD ENVIADA!</span>
-            <h1 class="confirmation-title">¡Reservación Registrada con Éxito!</h1>
+            <h1 class="confirmation-title" id="confirmationTitle">¡Reservación Registrada con Éxito!</h1>
 
-            <p class="confirmation-text">
+            <p class="confirmation-text" id="confirmationMessage">
                 Muchas gracias por elegir <strong>El Intipalka</strong>. Hemos recibido los datos de tu reservación.
                 Nuestro equipo se pondrá en contacto contigo a la brevedad vía WhatsApp o correo electrónico para
                 confirmar la disponibilidad de tu mesa.
             </p>
+
+            <!-- Resumen estructurado del Ticket de Reservación -->
+            <section id="reservationTicket" class="reservation-ticket" aria-label="Comprobante de solicitud de reserva" hidden>
+                <div class="ticket-header">
+                    <div class="ticket-brand">
+                        <span class="ticket-label">COMPROBANTE DE SOLICITUD</span>
+                        <h3 class="ticket-code" id="ticketCode">#INT-00000</h3>
+                    </div>
+                    <span class="ticket-badge">Pendiente de Aprobación</span>
+                </div>
+                <div class="ticket-grid">
+                    <div class="ticket-item">
+                        <span class="ticket-item-label">Titular</span>
+                        <strong class="ticket-item-value" id="ticketName">-</strong>
+                    </div>
+                    <div class="ticket-item">
+                        <span class="ticket-item-label">Fecha y Hora</span>
+                        <strong class="ticket-item-value" id="ticketDateTime">-</strong>
+                    </div>
+                    <div class="ticket-item">
+                        <span class="ticket-item-label">N° de Comensales</span>
+                        <strong class="ticket-item-value" id="ticketGuests">-</strong>
+                    </div>
+                    <div class="ticket-item">
+                        <span class="ticket-item-label">Zona Preferida</span>
+                        <strong class="ticket-item-value" id="ticketZone">-</strong>
+                    </div>
+                    <div class="ticket-item">
+                        <span class="ticket-item-label">Teléfono / WhatsApp</span>
+                        <strong class="ticket-item-value" id="ticketPhone">-</strong>
+                    </div>
+                    <div class="ticket-item">
+                        <span class="ticket-item-label">Correo Electrónico</span>
+                        <strong class="ticket-item-value" id="ticketEmail">-</strong>
+                    </div>
+                </div>
+                <div class="ticket-notes" id="ticketNotesContainer" hidden>
+                    <span class="ticket-item-label">Petición Especial / Comentarios</span>
+                    <p class="ticket-item-value" id="ticketNotes"></p>
+                </div>
+            </section>
 
             <div class="confirmation-info-box">
                 <h4>Información importante:</h4>
@@ -94,11 +136,11 @@
                         <p>Un santuario de sabor en el Valle del Sol.</p>
                     </div>
                     <div class="footer-social">
-                        <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook" class="social-icon">
+                        <a href="https://www.facebook.com/hotelvinasqueirolo/" target="_blank" rel="noopener noreferrer"><img src="assets/icons/facebook.svg" alt="Facebook" class="social-icon">
                             Facebook</a>
-                        <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+                        <a href="https://www.instagram.com/hotelvinasqueirolo/" target="_blank" rel="noopener noreferrer"><img src="assets/icons/instagram.svg" alt="Instagram" class="social-icon">
                             Instagram</a>
-                        <a href="#"><img src="assets/icons/youtube.svg" alt="YouTube" class="social-icon"> YouTube</a>
+                        <a href="https://www.youtube.com/@hotelvinasqueirolo" target="_blank" rel="noopener noreferrer"><img src="assets/icons/youtube.svg" alt="YouTube" class="social-icon"> YouTube</a>
                     </div>
                 </div>
 

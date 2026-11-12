@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/menu.css">
     <script src="js/carrusel.js" defer></script>
+    <script src="js/menu-filtros.js" defer></script>
+    <script src="js/modal-destacado.js" defer></script>
 </head>
 
 <body>
@@ -52,13 +54,52 @@
         <span class="section-subtitle"> <strong>NUESTRA PROPUESTA CULINARIA</strong></span>
         <h1 class="section-title">Platos de la Casa</h1>
         <p class="menu-hero-desc">Una fusión única de tradición iqueña y alta cocina peruana.</p>
+        <div class="menu-hero-cta">
+            <button type="button" id="openFeaturedModalBtn" class="btn btn-gold btn-featured-modal"
+                aria-haspopup="dialog" aria-controls="modalDestacado">
+                ⭐ Ver Recomendación del Chef
+            </button>
+        </div>
     </section>
 
     <!-- Contenedor principal de la Carta -->
     <main class="menu-container">
 
+        <!-- Barra interactiva de Búsqueda y Filtros de Categoría -->
+        <section class="menu-toolbar" aria-label="Filtros y búsqueda de la carta">
+            <div class="search-container">
+                <label for="menuSearch" class="visually-hidden">Buscar en la carta</label>
+                <div class="search-input-wrapper">
+                    <span class="search-icon" aria-hidden="true">🔍</span>
+                    <input type="search" id="menuSearch" class="menu-search-input"
+                        placeholder="Buscar plato, ingrediente o vino..." autocomplete="off">
+                    <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Limpiar búsqueda"
+                        hidden>&times;</button>
+                </div>
+            </div>
+
+            <nav class="category-filters" role="tablist" aria-label="Categorías gastronómicas">
+                <button type="button" class="filter-btn active" role="tab" aria-selected="true"
+                    data-filter="all">Todos</button>
+                <button type="button" class="filter-btn" role="tab" aria-selected="false"
+                    data-filter="entradas">Entradas</button>
+                <button type="button" class="filter-btn" role="tab" aria-selected="false"
+                    data-filter="platos-fuertes">Platos Fuertes</button>
+                <button type="button" class="filter-btn" role="tab" aria-selected="false"
+                    data-filter="postres-maridaje">Postres & Vinos</button>
+            </nav>
+        </section>
+
+        <!-- Mensaje de estado cuando no hay resultados de búsqueda -->
+        <div id="noResultsMessage" class="no-results-message" role="status" aria-live="polite" hidden>
+            <p class="no-results-title">No encontramos opciones que coincidan con tu búsqueda.</p>
+            <p class="no-results-hint">Intenta con términos como <em>ceviche</em>, <em>lomo</em>, <em>maridaje</em> o
+                <em>cacao</em>.</p>
+            <button type="button" id="resetSearchBtn" class="btn btn-outline-small">Ver toda la carta</button>
+        </div>
+
         <!-- CATEGORÍA 1: ENTRADAS -->
-        <div class="menu-category">
+        <div class="menu-category" data-category="entradas">
             <h2 class="category-title">Entradas</h2>
             <div class="menu-grid">
 
@@ -99,7 +140,7 @@
         </div>
 
         <!-- CATEGORÍA 2: PLATOS FUERTES (CARRUSEL CON FLECHAS Y PÁGINAS) -->
-        <div class="menu-category">
+        <div class="menu-category" data-category="platos-fuertes">
             <h2 class="category-title">Platos Fuertes</h2>
 
             <div class="carousel-container">
@@ -251,7 +292,7 @@
         </div>
 
         <!-- CATEGORÍA 3: POSTRES Y VINOS -->
-        <div class="menu-category">
+        <div class="menu-category" data-category="postres-maridaje">
             <h2 class="category-title">Postres & Maridaje</h2>
             <div class="menu-grid">
 
@@ -292,6 +333,29 @@
         </div>
 
     </main>
+
+    <!-- Diálogo Modal Accesible: Producto / Plato Destacado del Mes -->
+    <dialog id="modalDestacado" class="chef-modal" aria-labelledby="modalTitle">
+        <div class="modal-wrapper">
+            <button type="button" class="modal-close" id="closeFeaturedModalBtn"
+                aria-label="Cerrar ventana emergente">&times;</button>
+            <div class="modal-image-col">
+                <img src="assets/images/lomo-saltado-en-salsa.jpg"
+                    alt="Lomo Saltado al Pisco y Copa de Vino Intipalka Gran Reserva" width="450" height="320">
+            </div>
+            <div class="modal-body-col">
+                <span class="modal-badge">Sugerencia del Chef & Sommelier</span>
+                <h2 id="modalTitle">Lomo Saltado al Pisco & Intipalka Gran Reserva</h2>
+                <p class="modal-desc">
+                    Trozos selectos de lomo fino flambeados al pisco Queirolo, acompañados de risotto de ají amarillo y
+                    maridados a la perfección con nuestro vino Intipalka Malbec Reserva del Valle de Ica.
+                </p>
+                <div class="modal-price">Precio especial: <strong>S/ 72.00</strong></div>
+                <a href="reserva.html" class="btn btn-gold modal-cta">Reservar Mesa con este Maridaje</a>
+            </div>
+        </div>
+    </dialog>
+
     <!-- Pie de página (Footer) compartido -->
     <footer class="footer" id="reservaciones">
 
@@ -314,11 +378,11 @@
                         <p>Un santuario de sabor en el Valle del Sol.</p>
                     </div>
                     <div class="footer-social">
-                        <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook" class="social-icon">
+                        <a href="https://www.facebook.com/hotelvinasqueirolo/" target="_blank" rel="noopener noreferrer"><img src="assets/icons/facebook.svg" alt="Facebook" class="social-icon">
                             Facebook</a>
-                        <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+                        <a href="https://www.instagram.com/hotelvinasqueirolo/" target="_blank" rel="noopener noreferrer"><img src="assets/icons/instagram.svg" alt="Instagram" class="social-icon">
                             Instagram</a>
-                        <a href="#"><img src="assets/icons/youtube.svg" alt="YouTube" class="social-icon"> YouTube</a>
+                        <a href="https://www.youtube.com/@hotelvinasqueirolo" target="_blank" rel="noopener noreferrer"><img src="assets/icons/youtube.svg" alt="YouTube" class="social-icon"> YouTube</a>
                     </div>
                 </div>
 
