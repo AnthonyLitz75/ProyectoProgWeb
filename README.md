@@ -3,22 +3,27 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla%20ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 
 # Portal Web Gastronómico y Enoturístico — "El Intipalka"
-
 ### Hotel Viñas Queirolo · Valle de Ica, Perú
-
 **Entrega Académica — Desarrollo Web Front-End**
+
+> **🌐 Enlace del Sitio Web en Vivo (Producción):**  
+> **[https://intipalka.vercel.app](https://intipalka.vercel.app)**
+
+---
 
 ## 1. Ficha Técnica y Metadatos Académicos
 
-| Campo                     | Detalle Institucional                                                            |
-| :------------------------ | :------------------------------------------------------------------------------- |
-| **Proyecto**              | Portal Web Comercial y Gastronómico para Restaurante Local ("El Intipalka")      |
-| **Entorno & Contexto**    | Restaurante & Bodega del Hotel Viñas Queirolo (Valle de Ica, Perú)               |
-| **Asignatura / Curso**    | Desarrollo Web / Programación Front-End                                          |
-| **Tecnologías Base**      | HTML5 Semántico, CSS3 Moderno (Flexbox / Grid), JavaScript Vanilla (ES6+)        |
+| Campo | Detalle Institucional |
+| :--- | :--- |
+| **Proyecto** | Portal Web Comercial y Gastronómico para Restaurante Local ("El Intipalka") |
+| **Despliegue en Vivo (URL)** | [https://intipalka.vercel.app](https://intipalka.vercel.app) |
+| **Repositorio GitHub** | [https://github.com/AnthonyLitz75/AV2---Intipalka](https://github.com/AnthonyLitz75/AV2---Intipalka) |
+| **Entorno & Contexto** | Restaurante & Bodega del Hotel Viñas Queirolo (Valle de Ica, Perú) |
+| **Asignatura / Curso** | Desarrollo Web / Programación Front-End |
+| **Tecnologías Base** | HTML5 Semántico, CSS3 Moderno (Flexbox / Grid), JavaScript Vanilla (ES6+) |
 | **Dependencias Externas** | Ninguna (0 dependencias o frameworks JS externos; desarrollo nativo y accesible) |
-| **Compatibilidad**        | Estándar Baseline Web (Chrome 105+, Firefox 100+, Edge 105+, Safari 15.4+)       |
-| **Diseño Responsivo**     | Mobile-First / Adaptativo (Móvil, Tableta, Portátil y Escritorio 4K)             |
+| **Compatibilidad** | Estándar Baseline Web (Chrome 105+, Firefox 100+, Edge 105+, Safari 15.4+) |
+| **Diseño Responsivo** | Mobile-First / Adaptativo (Móvil, Tableta, Portátil y Escritorio 4K) |
 
 ---
 
