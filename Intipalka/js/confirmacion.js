@@ -88,4 +88,50 @@ document.addEventListener('DOMContentLoaded', () => {
         // Mensaje de cortesía ante acceso directo sin envío previo de formulario
         messageEl.textContent = 'Bienvenido(a) a El Intipalka. Si deseas solicitar una reservación en nuestros viñedos o restaurante, te invitamos a completar nuestro formulario.';
     }
+
+    // Funcionalidad de Impresión de Comprobante
+    const printBtn = document.getElementById('btnPrintTicket');
+    if (printBtn) {
+        printBtn.addEventListener('click', () => {
+            window.print();
+        });
+    }
+
+    // Funcionalidad de Copiado de Código de Reserva
+    const copyBtn = document.getElementById('btnCopyCode');
+    const codeEl = document.getElementById('ticketCode');
+    const copyStatus = document.getElementById('copyStatus');
+
+    if (copyBtn && codeEl) {
+        copyBtn.addEventListener('click', async () => {
+            const codigo = codeEl.textContent.trim();
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(codigo);
+                } else {
+                    const textarea = document.createElement('textarea');
+                    textarea.value = codigo;
+                    textarea.style.position = 'fixed';
+                    textarea.style.opacity = '0';
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                }
+                if (copyStatus) {
+                    copyStatus.textContent = '¡Copiado!';
+                    setTimeout(() => {
+                        copyStatus.textContent = '';
+                    }, 2500);
+                }
+            } catch (err) {
+                if (copyStatus) {
+                    copyStatus.textContent = 'Código copiado';
+                    setTimeout(() => {
+                        copyStatus.textContent = '';
+                    }, 2500);
+                }
+            }
+        });
+    }
 });

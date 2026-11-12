@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta y Menú - El Intipalka</title>
 
+    <!-- Favicon Oficial -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo-intipalka.svg">
+
     <!-- Fuente de Google -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -20,6 +23,8 @@
 </head>
 
 <body>
+    <!-- Enlace de accesibilidad para saltar al contenido principal (WCAG 2.4.1) -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <!-- Barra de Navegación -->
     <header class="navbar">
@@ -63,7 +68,7 @@
     </section>
 
     <!-- Contenedor principal de la Carta -->
-    <main class="menu-container">
+    <main class="menu-container" id="main-content" tabindex="-1">
 
         <!-- Barra interactiva de Búsqueda y Filtros de Categoría -->
         <section class="menu-toolbar" aria-label="Filtros y búsqueda de la carta">
@@ -104,7 +109,8 @@
             <div class="menu-grid">
 
                 <div class="dish-card">
-                    <img src="assets/images/cevichee.jpg" alt="Ceviche Clásico">
+                    <span class="dish-badge">Pesca del Día</span>
+                    <img src="assets/images/cevichee.jpg" alt="Ceviche Clásico" loading="lazy" decoding="async">
                     <div class="dish-info">
                         <div class="dish-header">
                             <h3>Ceviche Clásico</h3>
@@ -115,7 +121,7 @@
                 </div>
 
                 <div class="dish-card">
-                    <img src="assets/images/tiradito.jpg" alt="Tiradito de Pescado">
+                    <img src="assets/images/tiradito.jpg" alt="Tiradito de Pescado" loading="lazy" decoding="async">
                     <div class="dish-info">
                         <div class="dish-header">
                             <h3>Tiradito en Crema de Ají Amarillo</h3>
@@ -126,7 +132,7 @@
                 </div>
 
                 <div class="dish-card">
-                    <img src="assets/images/ensalada-pallar.jpg" alt="Ensalada de Pallares">
+                    <img src="assets/images/ensalada-pallar.jpg" alt="Ensalada de Pallares" loading="lazy" decoding="async">
                     <div class="dish-info">
                         <div class="dish-header">
                             <h3>Ensalada de Pallares Iqueños</h3>
@@ -151,7 +157,8 @@
                     <!-- PÁGINA 1: Platos 1, 2 y 3 -->
                     <div class="carousel-page" id="platos-pag-1">
                         <div class="dish-card">
-                            <img src="assets/images/lomo-saltado-en-salsa.jpg" alt="Lomo Saltado">
+                            <span class="dish-badge">Especialidad de la Casa</span>
+                            <img src="assets/images/lomo-saltado-en-salsa.jpg" alt="Lomo Saltado" loading="lazy" decoding="async">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Lomo Saltado al Pisco</h3>
@@ -163,7 +170,7 @@
                         </div>
 
                         <div class="dish-card">
-                            <img src="assets/images/aji-galllina.jpg" alt="Ají de Gallina">
+                            <img src="assets/images/aji-galllina.jpg" alt="Ají de Gallina" loading="lazy" decoding="async">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Ají de Gallina Cremoso</h3>
@@ -175,7 +182,7 @@
                         </div>
 
                         <div class="dish-card">
-                            <img src="assets/images/arroz-mariscos.jpg" alt="Arroz con Mariscos">
+                            <img src="assets/images/arroz-mariscos.jpg" alt="Arroz con Mariscos" loading="lazy" decoding="async">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Arroz con Mariscos del Valle</h3>
@@ -197,7 +204,7 @@
                         <a href="#platos-pag-1" class="carousel-arrow arrow-left" title="Platos anteriores">&#10094;</a>
 
                         <div class="dish-card">
-                            <img src="assets/images/secoo.jpg" alt="Seco de Res con Pallares">
+                            <img src="assets/images/secoo.jpg" alt="Seco de Res con Pallares" loading="lazy" decoding="async">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Seco de Res con Pallares</h3>
@@ -209,7 +216,7 @@
                         </div>
 
                         <div class="dish-card">
-                            <img src="assets/images/paella.jpg" alt="Paella de Mariscos">
+                            <img src="assets/images/paella.jpg" alt="Paella de Mariscos" loading="lazy" decoding="async">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Paella Marina al Pisco</h3>
@@ -221,7 +228,7 @@
                         </div>
 
                         <div class="dish-card">
-                            <img src="assets/images/ensalada-langostino.jpg" alt="Langostinos Salteados">
+                            <img src="assets/images/ensalada-langostino.jpg" alt="Langostinos Salteados" loading="lazy" decoding="async">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Langostinos al Ajo Crocante</h3>
@@ -243,7 +250,8 @@
                         <a href="#platos-pag-2" class="carousel-arrow arrow-left" title="Platos anteriores">&#10094;</a>
 
                         <div class="dish-card">
-                            <img src="assets/images/comida_1.jpg" alt="Arroz Meloso con Camarones">
+                            <span class="dish-badge">Recomendado del Valle</span>
+                            <img src="assets/images/comida_1.jpg" alt="Arroz Meloso con Camarones" loading="lazy" decoding="async">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Arroz Meloso con Camarones</h3>
@@ -255,7 +263,7 @@
                         </div>
 
                         <div class="dish-card">
-                            <img src="assets/images/linguini.jpg" alt="Linguini a la Huancaína con Lomo">
+                            <img src="assets/images/linguini.jpg" alt="Linguini a la Huancaína con Lomo" loading="lazy" decoding="async">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Linguini a la Huancaína con Lomo</h3>
@@ -267,7 +275,7 @@
                         </div>
 
                         <div class="dish-card">
-                            <img src="assets/images/calamar.jpg" alt="Calamares Crocantes al Pisco">
+                            <img src="assets/images/calamar.jpg" alt="Calamares Crocantes al Pisco" loading="lazy" decoding="async">
                             <div class="dish-info">
                                 <div class="dish-header">
                                     <h3>Calamares Crocantes al Pisco</h3>
@@ -297,7 +305,8 @@
             <div class="menu-grid">
 
                 <div class="dish-card">
-                    <img src="assets/images/postre-chocolate.jpg" alt="Mousse de Chocolate">
+                    <span class="dish-badge">100% Cacao Peruano</span>
+                    <img src="assets/images/postre-chocolate.jpg" alt="Mousse de Chocolate" loading="lazy" decoding="async">
                     <div class="dish-info">
                         <div class="dish-header">
                             <h3>Mousse de Cacao Peruano</h3>
@@ -308,7 +317,7 @@
                 </div>
 
                 <div class="dish-card">
-                    <img src="assets/images/tarta-manzana.jpg" alt="Tarta de Manzana">
+                    <img src="assets/images/tarta-manzana.jpg" alt="Tarta de Manzana" loading="lazy" decoding="async">
                     <div class="dish-info">
                         <div class="dish-header">
                             <h3>Tarta de Manzana Rústica</h3>
@@ -319,7 +328,7 @@
                 </div>
 
                 <div class="dish-card">
-                    <img src="assets/images/varios-vinos.jpg" alt="Selección de Vinos Intipalka">
+                    <img src="assets/images/varios-vinos.jpg" alt="Selección de Vinos Intipalka" loading="lazy" decoding="async">
                     <div class="dish-info">
                         <div class="dish-header">
                             <h3>Copa de Vino Intipalka Reserva</h3>

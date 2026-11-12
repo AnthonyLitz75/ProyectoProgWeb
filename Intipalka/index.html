@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Intipalka</title>
 
+    <!-- Favicon Oficial -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo-intipalka.svg">
+
     <!-- Importación de las familias tipográficas Playfair Display y Montserrat -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -19,6 +22,9 @@
 </head>
 
 <body>
+    <!-- Enlace de accesibilidad para saltar al contenido principal (WCAG 2.4.1) -->
+    <a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+
     <!-- Navbar / Encabezado principal -->
     <header class="navbar">
         <a href="index.html" class="logo" aria-label="El Intipalka, inicio">
@@ -47,7 +53,7 @@
     </header>
 
     <!-- Sección Hero (Fondo con logo y título principal) -->
-    <main class="hero" id="inicio">
+    <main class="hero" id="inicio" tabindex="-1">
 
         <!--contenedor del contenido central-->
         <div class="hero-content">
@@ -85,7 +91,7 @@
             </div>
             <div class="history-image-wrapper">
                 <div class="image-backdrop"></div> <!--elemento decorativo dla img-->
-                <img src="assets/images/Intapalka.jpg" alt="Nuestra Herencia Terrace" class="history-image">
+                <img src="assets/images/Intapalka.jpg" alt="Nuestra Herencia Terrace" class="history-image" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -99,7 +105,7 @@
 
         <div class="gastronomy-content">
             <div class="gastronomy-image-container">
-                <img src="assets/images/comida_1.jpg" alt="Plato Gourmet del Mar y la Tierra" class="gastronomy-image">
+                <img src="assets/images/comida_1.jpg" alt="Plato Gourmet del Mar y la Tierra" class="gastronomy-image" loading="lazy" decoding="async">
             </div>
             <div class="gastronomy-text">
                 <h3 class="gastronomy-title">Sabores del Mar y la Tierra</h3>
@@ -151,7 +157,7 @@
 
             <!-- Imagen panorámica de las bodegas / barricas -->
             <div class="wine-tour-image-box">
-                <img src="assets/images/bodegass.jpg" alt="Cava de Vinos y Barricas Intipalka">
+                <img src="assets/images/bodegass.jpg" alt="Cava de Vinos y Barricas Intipalka" loading="lazy" decoding="async">
             </div>
 
         </div>

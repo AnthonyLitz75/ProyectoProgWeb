@@ -36,6 +36,7 @@ img {
 
 /* Compensación de desplazamiento para navegación con anclas fijas */
 section[id],
+#main-content,
 #inicio,
 #historia,
 #nosotros,
@@ -340,7 +341,7 @@ section[id],
 }
 
 .btn-gold {
-  background-color: #1e7e4e;
+  background-color: #c59b27;
   color: #ffffff;
   border-radius: 4px;
   padding: 14px 34px;
@@ -351,13 +352,13 @@ section[id],
     background-color 0.3s ease,
     transform 0.25s ease,
     box-shadow 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(197, 155, 39, 0.3);
 }
 
 .btn-gold:hover {
-  background-color: #16603b;
+  background-color: #a8821d;
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(30, 126, 78, 0.5);
+  box-shadow: 0 8px 25px rgba(197, 155, 39, 0.45);
 }
 
 /* Títulos y Subtítulos estándar para secciones */
@@ -618,4 +619,28 @@ section[id],
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+/* Enlace accesible para saltar la navegación con teclado (WCAG 2.4.1) */
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: 20px;
+  background-color: #85182a;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 0 0 6px 6px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 10001;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  transition: top 0.25s ease;
+}
+
+.skip-link:focus-visible {
+  top: 0;
+  outline: 3px solid #d4af37;
+  outline-offset: 3px;
 }

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservar Mesa - El Intipalka</title>
 
+    <!-- Favicon Oficial -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo-intipalka.svg">
+
     <!-- Importación de Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -17,6 +20,8 @@
 </head>
 
 <body>
+    <!-- Enlace de accesibilidad para saltar al contenido principal (WCAG 2.4.1) -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <!-- Barra de Navegación -->
     <header class="navbar">
@@ -59,7 +64,7 @@
     </section>
 
     <!-- Contenedor Principal de la Reserva -->
-    <main class="reservation-container">
+    <main class="reservation-container" id="main-content" tabindex="-1">
         <div class="reservation-grid">
 
             <!-- Columna Izquierda: Formulario -->

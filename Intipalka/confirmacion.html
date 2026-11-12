@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva Confirmada - El Intipalka</title>
 
+    <!-- Favicon Oficial -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo-intipalka.svg">
+
     <!-- Importación de Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -17,6 +20,8 @@
 </head>
 
 <body>
+    <!-- Enlace de accesibilidad para saltar al contenido principal (WCAG 2.4.1) -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <!-- Barra de Navegación -->
     <header class="navbar">
@@ -47,7 +52,7 @@
     </header>
 
     <!-- Contenedor Principal de Confirmación -->
-    <main class="confirmation-container">
+    <main class="confirmation-container" id="main-content" tabindex="-1">
         <div class="confirmation-card">
 
             <div class="confirmation-icon">✓</div>
@@ -66,7 +71,14 @@
                 <div class="ticket-header">
                     <div class="ticket-brand">
                         <span class="ticket-label">COMPROBANTE DE SOLICITUD</span>
-                        <h3 class="ticket-code" id="ticketCode">#INT-00000</h3>
+                        <div class="ticket-code-wrapper">
+                            <h3 class="ticket-code" id="ticketCode">#INT-00000</h3>
+                            <button type="button" id="btnCopyCode" class="btn-copy-code" aria-label="Copiar código de reservación" title="Copiar código">
+                                <span class="copy-icon" aria-hidden="true">📋</span>
+                                <span class="copy-text">Copiar</span>
+                            </button>
+                            <span class="copy-status" id="copyStatus" role="status" aria-live="polite"></span>
+                        </div>
                     </div>
                     <span class="ticket-badge">Pendiente de Aprobación</span>
                 </div>
@@ -109,6 +121,7 @@
             </div>
 
             <div class="confirmation-buttons">
+                <button type="button" id="btnPrintTicket" class="btn btn-reserve btn-print">🖨️ IMPRIMIR COMPROBANTE</button>
                 <a href="index.html" class="btn btn-gold">VOLVER AL INICIO</a>
                 <a href="menu.html" class="btn btn-menu-alt">VER LA CARTA</a>
             </div>

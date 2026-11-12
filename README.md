@@ -89,14 +89,17 @@ La carta culinaria del restaurante implementa componentes interactivos desarroll
 - **Respeto a la Preferencia del Usuario**: Detecta si el sistema operativo tiene activada la opción de reducción de movimiento (`prefers-reduced-motion`) y desactiva el avance automático en conformidad con las pautas de accesibilidad WCAG.
 
 #### D. Modal de Recomendación del Sommelier
-
 - **Ventana Emergente Nativa (`<dialog>`)**: Ventana modal semántica activada desde el banner destacado de la carta.
-- **Contenido Especializado**: Ficha de maridaje con notas de cata del vino insignia (_Intipalka N° 1_) y sugerencia de plato principal (_Lomo Saltado al Pisco Queirolo_).
+- **Contenido Especializado**: Ficha de maridaje con notas de cata del vino insignia (*Intipalka N° 1*) y sugerencia de plato principal (*Lomo Saltado al Pisco Queirolo*).
 - **Comportamiento Accesible**:
-  - Cierre por triple vía: botón circular de salida (`✕`), pulsación de la tecla `Escape` o clic directo sobre el fondo semitransparente (_backdrop_).
-  - Retención de foco (_focus trap_) mientras el modal está abierto y devolución del foco al botón detonador al cerrarse.
+  - Cierre por triple vía: botón circular de salida (`✕`), pulsación de la tecla `Escape` o clic directo sobre el fondo semitransparente (*backdrop*).
+  - Retención de foco (*focus trap*) mientras el modal está abierto y devolución del foco al botón detonador al cerrarse.
   - Bloqueo de desplazamiento del fondo (`document.body.style.overflow = 'hidden'`) para impedir scroll accidental en la página principal.
   - Botón de acción directa que redirige al formulario de reservas con la sugerencia preseleccionada.
+
+#### E. Badges Gastronómicos y Guía Visual
+- **Insignias Culinarias (`.dish-badge`)**: Etiquetas elegantes sobre las especialidades de la casa (*"Pesca del Día"*, *"Especialidad de la Casa"*, *"Recomendado del Valle"* y *"100% Cacao Peruano"*), facilitando el escaneo visual rápido y complementando la búsqueda en tiempo real.
+- **Armonía Cromática**: Diferenciación intencional entre los botones dorados institucionales (`.btn-gold`, tono oro viejo `#c59b27`) y los botones de conversión crítica (`.btn-reserve`, verde bosque `#1e7e4e`).
 
 ---
 
@@ -122,8 +125,10 @@ La carta culinaria del restaurante implementa componentes interactivos desarroll
 - **Generación de Ticket Único**: Creación programática de un código de reservación alfanumérico irrepetible (formato `#INT-XXXXX`).
 - **Mitigación Estricta de Vulnerabilidades XSS**: Todos los valores ingresados por el usuario (nombres, fechas, zona, notas) se inyectan en el DOM utilizando exclusivamente la propiedad `textContent`, neutralizando cualquier intento de inyección de código malicioso o marcado HTML.
 - **Diseño Tipo Comprobante Gastronómico**: Presentación formal tipo tarjeta de embarque / ticket de servicio con desglose de fecha formateada en lenguaje natural, comensales y turno seleccionado.
-- **Acciones de Usuario**:
-  - Botón de **Impresión / Descarga PDF**: Dispara el diálogo de impresión del navegador (`window.print()`) con estilos optimizados para papel.
+- **Acciones y Microinteracciones de Usuario**:
+  - Botón de **Impresión / Descarga PDF**: Dispara el diálogo de impresión del navegador (`window.print()`).
+  - **Hoja de Estilos de Impresión (`@media print`)**: Al imprimir o exportar a PDF, se aíslan los datos del comprobante y se ocultan automáticamente la barra de navegación, footer, mapa y botones decorativos.
+  - **Copia Rápida al Portapapeles**: Botón interactivo junto al código de reserva (`#INT-XXXXX`) que permite copiar el localizador al portapapeles del dispositivo con confirmación visual accesible (`role="status"`).
   - Botón de **Retorno al Inicio**: Redirección rápida a la portada principal.
 
 ---
@@ -143,22 +148,33 @@ AV2 - Intipalka/
     ├── reserva.html                   # Formulario de solicitud de reservaciones
     ├── confirmacion.html              # Vista de confirmación y ticket dinámico
     ├── assets/
-    │   ├── icons/                     # Iconografía vectorial SVG optimizada
+    │   ├── icons/                     # Iconografía vectorial SVG optimizada (incluye logo-intipalka.svg)
     │   └── images/                    # Fotografías de alta resolución (platos, viñedos, bodega)
     ├── css/
-    │   ├── styles.css                 # Variables globales, tipografías, navbar, footer y utilidades A11y
+    │   ├── styles.css                 # Variables globales, tipografías, navbar, footer, skip-link y utilidades A11y
     │   ├── index.css                  # Estilos específicos de la portada, historia y tours
-    │   ├── menu.css                   # Cuadrículas de platos, carrusel, filtros y modal sommelier
+    │   ├── menu.css                   # Cuadrículas de platos, carrusel, filtros, modal sommelier y badges
     │   ├── reserva.css                # Estilos del formulario de reservaciones
     │   ├── contacto.css               # Estilos de la sección de contacto, horarios y mapa
-    │   └── confirmacion.css           # Estilos del comprobante digital y ticket de reserva
+    │   └── confirmacion.css           # Estilos del comprobante digital, botón de copiado y @media print
     ├── js/
-        ├── carrusel.js                # Lógica del carrusel: autoplay, wrap-around y pausa inteligente
-        ├── menu-filtros.js            # Lógica de filtrado por categoría y buscador normalizado
-        ├── modal-destacado.js         # Lógica accesible del elemento <dialog> del Sommelier
-        ├── validacion.js              # Validación personalizada del formulario de reservas
-        └── confirmacion.js            # Procesamiento de URLSearchParams y renderizado anti-XSS
-
+    │   ├── carrusel.js                # Lógica del carrusel: autoplay, wrap-around y pausa inteligente
+    │   ├── menu-filtros.js            # Lógica de filtrado por categoría y buscador normalizado
+    │   ├── modal-destacado.js         # Lógica accesible del elemento <dialog> del Sommelier
+    │   ├── validacion.js              # Validación personalizada del formulario de reservas
+    │   └── confirmacion.js            # Procesamiento de URLSearchParams, copiado e impresión
+    └── docs/
+        ├── Estructura Intipalka.docx  # Requerimientos base de la asignación académica
+        ├── README.md                  # Documentación técnica empaquetada para el entregable
+        └── specs/                     # Especificaciones formales Spec-Driven Development (SDD)
+            ├── 001-carrusel-automatico/
+            ├── 002-carta-filtros-busqueda/
+            ├── 003-modal-destacado/
+            ├── 004-confirmacion-dinamica/
+            ├── 005-documentacion-redes/
+            ├── 006-accesibilidad-rendimiento-favicon/
+            ├── 007-impresion-ticket-portapapeles/
+            └── 008-refinamiento-carta-badges-color/
 ```
 
 ---

@@ -158,6 +158,13 @@
   text-transform: uppercase;
 }
 
+.ticket-code-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .ticket-code {
   margin: 4px 0 0 0;
   font-family: "Montserrat", monospace, sans-serif;
@@ -165,6 +172,37 @@
   font-weight: 700;
   color: #85182a;
   letter-spacing: 0.05em;
+}
+
+.btn-copy-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fbf6ec;
+  border: 1px solid #d4af37;
+  color: #85182a;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 4px;
+}
+
+.btn-copy-code:hover {
+  background: #85182a;
+  color: #ffffff;
+  border-color: #85182a;
+}
+
+.copy-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1e7e4e;
+  margin-left: 4px;
+  transition: opacity 0.2s ease;
 }
 
 .ticket-badge {
@@ -245,5 +283,55 @@
 
   .reservation-ticket {
     padding: 20px 18px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. ESTILOS DE IMPRESIÓN LIMPIA PARA COMPROBANTE (@media print)
+   -------------------------------------------------------------------------- */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* Ocultar elementos irrelevantes para el comprobante en papel/PDF */
+  .navbar,
+  .footer,
+  .confirmation-buttons,
+  .btn-copy-code,
+  .copy-status,
+  .confirmation-icon,
+  .skip-link {
+    display: none !important;
+  }
+
+  .confirmation-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .confirmation-card {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 10px 0 !important;
+  }
+
+  .confirmation-title {
+    font-size: 1.8em !important;
+    color: #3b2225 !important;
+  }
+
+  .reservation-ticket {
+    box-shadow: none !important;
+    border: 2px solid #3b2225 !important;
+    margin: 20px 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .confirmation-info-box {
+    border-left: 3px solid #85182a !important;
+    background: #fdfdfd !important;
   }
 }
