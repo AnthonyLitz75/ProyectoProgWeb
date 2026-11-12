@@ -3,7 +3,9 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla%20ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 
 # Portal Web Gastronómico y Enoturístico — "El Intipalka"
+
 ### Hotel Viñas Queirolo · Valle de Ica, Perú
+
 **Entrega Académica — Desarrollo Web Front-End**
 
 > **🌐 Enlace del Sitio Web en Vivo (Producción):**  
@@ -13,17 +15,17 @@
 
 ## 1. Ficha Técnica y Metadatos Académicos
 
-| Campo | Detalle Institucional |
-| :--- | :--- |
-| **Proyecto** | Portal Web Comercial y Gastronómico para Restaurante Local ("El Intipalka") |
-| **Despliegue en Vivo (URL)** | [https://intipalka.vercel.app](https://intipalka.vercel.app) |
-| **Repositorio GitHub** | [https://github.com/AnthonyLitz75/AV2---Intipalka](https://github.com/AnthonyLitz75/AV2---Intipalka) |
-| **Entorno & Contexto** | Restaurante & Bodega del Hotel Viñas Queirolo (Valle de Ica, Perú) |
-| **Asignatura / Curso** | Desarrollo Web / Programación Front-End |
-| **Tecnologías Base** | HTML5 Semántico, CSS3 Moderno (Flexbox / Grid), JavaScript Vanilla (ES6+) |
-| **Dependencias Externas** | Ninguna (0 dependencias o frameworks JS externos; desarrollo nativo y accesible) |
-| **Compatibilidad** | Estándar Baseline Web (Chrome 105+, Firefox 100+, Edge 105+, Safari 15.4+) |
-| **Diseño Responsivo** | Mobile-First / Adaptativo (Móvil, Tableta, Portátil y Escritorio 4K) |
+| Campo                        | Detalle Institucional                                                                                |
+| :--------------------------- | :--------------------------------------------------------------------------------------------------- |
+| **Proyecto**                 | Portal Web Comercial y Gastronómico para Restaurante Local ("El Intipalka")                          |
+| **Despliegue en Vivo (URL)** | [https://intipalka.vercel.app](https://intipalka.vercel.app)                                         |
+| **Repositorio GitHub**       | [https://github.com/AnthonyLitz75/AV2---Intipalka](https://github.com/AnthonyLitz75/AV2---Intipalka) |
+| **Entorno & Contexto**       | Restaurante & Bodega del Hotel Viñas Queirolo (Valle de Ica, Perú)                                   |
+| **Asignatura / Curso**       | Desarrollo Web / Programación Front-End                                                              |
+| **Tecnologías Base**         | HTML5 Semántico, CSS3 Moderno (Flexbox / Grid), JavaScript Vanilla (ES6+)                            |
+| **Dependencias Externas**    | Ninguna (0 dependencias o frameworks JS externos; desarrollo nativo y accesible)                     |
+| **Compatibilidad**           | Estándar Baseline Web (Chrome 105+, Firefox 100+, Edge 105+, Safari 15.4+)                           |
+| **Diseño Responsivo**        | Mobile-First / Adaptativo (Móvil, Tableta, Portátil y Escritorio 4K)                                 |
 
 ---
 
@@ -94,16 +96,18 @@ La carta culinaria del restaurante implementa componentes interactivos desarroll
 - **Respeto a la Preferencia del Usuario**: Detecta si el sistema operativo tiene activada la opción de reducción de movimiento (`prefers-reduced-motion`) y desactiva el avance automático en conformidad con las pautas de accesibilidad WCAG.
 
 #### D. Modal de Recomendación del Sommelier
+
 - **Ventana Emergente Nativa (`<dialog>`)**: Ventana modal semántica activada desde el banner destacado de la carta.
-- **Contenido Especializado**: Ficha de maridaje con notas de cata del vino insignia (*Intipalka N° 1*) y sugerencia de plato principal (*Lomo Saltado al Pisco Queirolo*).
+- **Contenido Especializado**: Ficha de maridaje con notas de cata del vino insignia (_Intipalka N° 1_) y sugerencia de plato principal (_Lomo Saltado al Pisco Queirolo_).
 - **Comportamiento Accesible**:
-  - Cierre por triple vía: botón circular de salida (`✕`), pulsación de la tecla `Escape` o clic directo sobre el fondo semitransparente (*backdrop*).
-  - Retención de foco (*focus trap*) mientras el modal está abierto y devolución del foco al botón detonador al cerrarse.
+  - Cierre por triple vía: botón circular de salida (`✕`), pulsación de la tecla `Escape` o clic directo sobre el fondo semitransparente (_backdrop_).
+  - Retención de foco (_focus trap_) mientras el modal está abierto y devolución del foco al botón detonador al cerrarse.
   - Bloqueo de desplazamiento del fondo (`document.body.style.overflow = 'hidden'`) para impedir scroll accidental en la página principal.
   - Botón de acción directa que redirige al formulario de reservas con la sugerencia preseleccionada.
 
 #### E. Badges Gastronómicos y Guía Visual
-- **Insignias Culinarias (`.dish-badge`)**: Etiquetas elegantes sobre las especialidades de la casa (*"Pesca del Día"*, *"Especialidad de la Casa"*, *"Recomendado del Valle"* y *"100% Cacao Peruano"*), facilitando el escaneo visual rápido y complementando la búsqueda en tiempo real.
+
+- **Insignias Culinarias (`.dish-badge`)**: Etiquetas elegantes sobre las especialidades de la casa (_"Pesca del Día"_, _"Especialidad de la Casa"_, _"Recomendado del Valle"_ y _"100% Cacao Peruano"_), facilitando el escaneo visual rápido y complementando la búsqueda en tiempo real.
 - **Armonía Cromática**: Diferenciación intencional entre los botones dorados institucionales (`.btn-gold`, tono oro viejo `#c59b27`) y los botones de conversión crítica (`.btn-reserve`, verde bosque `#1e7e4e`).
 
 ---
@@ -163,23 +167,12 @@ AV2 - Intipalka/
     │   ├── contacto.css               # Estilos de la sección de contacto, horarios y mapa
     │   └── confirmacion.css           # Estilos del comprobante digital, botón de copiado y @media print
     ├── js/
-    │   ├── carrusel.js                # Lógica del carrusel: autoplay, wrap-around y pausa inteligente
-    │   ├── menu-filtros.js            # Lógica de filtrado por categoría y buscador normalizado
-    │   ├── modal-destacado.js         # Lógica accesible del elemento <dialog> del Sommelier
-    │   ├── validacion.js              # Validación personalizada del formulario de reservas
-    │   └── confirmacion.js            # Procesamiento de URLSearchParams, copiado e impresión
-    └── docs/
-        ├── Estructura Intipalka.docx  # Requerimientos base de la asignación académica
-        ├── README.md                  # Documentación técnica empaquetada para el entregable
-        └── specs/                     # Especificaciones formales Spec-Driven Development (SDD)
-            ├── 001-carrusel-automatico/
-            ├── 002-carta-filtros-busqueda/
-            ├── 003-modal-destacado/
-            ├── 004-confirmacion-dinamica/
-            ├── 005-documentacion-redes/
-            ├── 006-accesibilidad-rendimiento-favicon/
-            ├── 007-impresion-ticket-portapapeles/
-            └── 008-refinamiento-carta-badges-color/
+        ├── carrusel.js                # Lógica del carrusel: autoplay, wrap-around y pausa inteligente
+        ├── menu-filtros.js            # Lógica de filtrado por categoría y buscador normalizado
+        ├── modal-destacado.js         # Lógica accesible del elemento <dialog> del Sommelier
+        ├── validacion.js              # Validación personalizada del formulario de reservas
+        └── confirmacion.js            # Procesamiento de URLSearchParams, copiado e impresión
+
 ```
 
 ---
