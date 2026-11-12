@@ -2,33 +2,32 @@
 [![CSS3](https://img.shields.io/badge/CSS3-Moderno-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla%20ES6+-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 
-
-
 # Portal Web Gastronómico y Enoturístico — "El Intipalka"
+
 ### Hotel Viñas Queirolo · Valle de Ica, Perú
+
 **Entrega Académica — Desarrollo Web Front-End**
-
-
 
 ## 1. Ficha Técnica y Metadatos Académicos
 
-| Campo | Detalle Institucional |
-| :--- | :--- |
-| **Proyecto** | Portal Web Comercial y Gastronómico para Restaurante Local ("El Intipalka") |
-| **Entorno & Contexto** | Restaurante & Bodega del Hotel Viñas Queirolo (Valle de Ica, Perú) |
-| **Asignatura / Curso** | Desarrollo Web / Programación Front-End |
-| **Tecnologías Base** | HTML5 Semántico, CSS3 Moderno (Flexbox / Grid), JavaScript Vanilla (ES6+) |
+| Campo                     | Detalle Institucional                                                            |
+| :------------------------ | :------------------------------------------------------------------------------- |
+| **Proyecto**              | Portal Web Comercial y Gastronómico para Restaurante Local ("El Intipalka")      |
+| **Entorno & Contexto**    | Restaurante & Bodega del Hotel Viñas Queirolo (Valle de Ica, Perú)               |
+| **Asignatura / Curso**    | Desarrollo Web / Programación Front-End                                          |
+| **Tecnologías Base**      | HTML5 Semántico, CSS3 Moderno (Flexbox / Grid), JavaScript Vanilla (ES6+)        |
 | **Dependencias Externas** | Ninguna (0 dependencias o frameworks JS externos; desarrollo nativo y accesible) |
-| **Compatibilidad** | Estándar Baseline Web (Chrome 105+, Firefox 100+, Edge 105+, Safari 15.4+) |
-| **Diseño Responsivo** | Mobile-First / Adaptativo (Móvil, Tableta, Portátil y Escritorio 4K) |
+| **Compatibilidad**        | Estándar Baseline Web (Chrome 105+, Firefox 100+, Edge 105+, Safari 15.4+)       |
+| **Diseño Responsivo**     | Mobile-First / Adaptativo (Móvil, Tableta, Portátil y Escritorio 4K)             |
 
 ---
 
 ## 2. Descripción del Proyecto
 
-**"El Intipalka"** (*Valle del Sol* en quechua) es la propuesta de alta cocina peruana y enoturismo del Hotel Viñas Queirolo. El presente proyecto académico consiste en el desarrollo integral de una plataforma web comercial que combina la identidad vitivinícola tradicional con estándares modernos de ingeniería de software front-end.
+**"El Intipalka"** (_Valle del Sol_ en quechua) es la propuesta de alta cocina peruana y enoturismo del Hotel Viñas Queirolo. El presente proyecto académico consiste en el desarrollo integral de una plataforma web comercial que combina la identidad vitivinícola tradicional con estándares modernos de ingeniería de software front-end.
 
 El portal permite a los usuarios:
+
 1. Conocer la historia, el terruño y la experiencia gastronómica del viñedo.
 2. Explorar una carta interactiva con filtrado en tiempo real, búsqueda inteligente y recomendaciones enológicas del Sommelier.
 3. Gestionar solicitudes de reservación de mesa mediante formularios validados rigurosamente.
@@ -50,14 +49,14 @@ La aplicación está distribuida en cuatro vistas interconectadas, cada una dise
 
 ### 3.1. Portada Institucional y Experiencia Enoturística (`index.html`)
 
-* **Navegación Fluida y Menú Responsivo**: Barra superior fija con logotipo vectorial en alta definición y navegación accesible. En pantallas móviles se transforma en un menú desplegable accesible.
-* **Hero Banner con Llamados a la Acción (CTA)**: Entrada visual de alto impacto que conecta de forma inmediata a los visitantes con la carta gastronómica (`menu.html`) y el sistema de reservas (`reserva.html`).
-* **Storytelling Gastronómico y Enológico**:
-  * *Nuestra Historia y Filosofía*: Sección dedicada a la tradición centenaria de Viñas Queirolo y la cocina criolla de autor.
-  * *La Experiencia en Viñedos*: Bloque informativo sobre catas de vino, recorridos guiados por las parras y maridajes exclusivos.
-* **Prueba Social y Testimonios**: Cuadrícula de reseñas reales de comensales y visitantes destacando servicio, ambiente y gastronomía.
-* **Integración Geográfica**: Mapa interactivo de Google Maps embebido con la geolocalización exacta de las instalaciones en San José de Los Molinos, Ica.
-* **Pie de Página Oficial**: Enlaces institucionales a las redes sociales oficiales del Hotel Viñas Queirolo (Facebook, Instagram y YouTube) con protección de navegación segura (`target="_blank"` y `rel="noopener noreferrer"`).
+- **Navegación Fluida y Menú Responsivo**: Barra superior fija con logotipo vectorial en alta definición y navegación accesible. En pantallas móviles se transforma en un menú desplegable accesible.
+- **Hero Banner con Llamados a la Acción (CTA)**: Entrada visual de alto impacto que conecta de forma inmediata a los visitantes con la carta gastronómica (`menu.html`) y el sistema de reservas (`reserva.html`).
+- **Storytelling Gastronómico y Enológico**:
+  - _Nuestra Historia y Filosofía_: Sección dedicada a la tradición centenaria de Viñas Queirolo y la cocina criolla de autor.
+  - _La Experiencia en Viñedos_: Bloque informativo sobre catas de vino, recorridos guiados por las parras y maridajes exclusivos.
+- **Prueba Social y Testimonios**: Cuadrícula de reseñas reales de comensales y visitantes destacando servicio, ambiente y gastronomía.
+- **Integración Geográfica**: Mapa interactivo de Google Maps embebido con la geolocalización exacta de las instalaciones en San José de Los Molinos, Ica.
+- **Pie de Página Oficial**: Enlaces institucionales a las redes sociales oficiales del Hotel Viñas Queirolo (Facebook, Instagram y YouTube) con protección de navegación segura (`target="_blank"` y `rel="noopener noreferrer"`).
 
 ---
 
@@ -66,62 +65,66 @@ La aplicación está distribuida en cuatro vistas interconectadas, cada una dise
 La carta culinaria del restaurante implementa componentes interactivos desarrollados exclusivamente en JavaScript nativo:
 
 #### A. Filtro por Categorías en Tiempo Real (WAI-ARIA Tabs)
-* Pestañas interactivas organizadas por secciones:
-  * **Todos**: Despliega la oferta gastronómica completa.
-  * **Entradas**: Selección de cebiches, causas, tiraditos y aperitivos.
-  * **Platos Fuertes**: Carnes al pisco, pastas artesanales y especialidades del chef.
-  * **Postres & Vinos**: Dulces peruanos y la colección enológica Intipalka (Gran Reserva, Reserva y Varietales).
-* **Accesibilidad WAI-ARIA**: Estructurado con `role="tablist"` y `role="tab"`, permitiendo el cambio de categorías mediante teclado (flechas izquierda/derecha, inicio y fin).
-* **Transiciones Visuales Suaves**: Filtrado no destructivo que oculta secciones sin generar saltos abruptos de scroll.
+
+- Pestañas interactivas organizadas por secciones:
+  - **Todos**: Despliega la oferta gastronómica completa.
+  - **Entradas**: Selección de cebiches, causas, tiraditos y aperitivos.
+  - **Platos Fuertes**: Carnes al pisco, pastas artesanales y especialidades del chef.
+  - **Postres & Vinos**: Dulces peruanos y la colección enológica Intipalka (Gran Reserva, Reserva y Varietales).
+- **Accesibilidad WAI-ARIA**: Estructurado con `role="tablist"` y `role="tab"`, permitiendo el cambio de categorías mediante teclado (flechas izquierda/derecha, inicio y fin).
+- **Transiciones Visuales Suaves**: Filtrado no destructivo que oculta secciones sin generar saltos abruptos de scroll.
 
 #### B. Buscador Inteligente en Tiempo Real
-* **Filtrado Instantáneo**: Campo de texto que evalúa coincidencias conforme el usuario escribe, buscando sobre títulos de platos, descripciones, ingredientes y sugerencias de maridaje.
-* **Normalización Diacrítica (`String.prototype.normalize`)**: El motor de búsqueda ignora diferencias entre mayúsculas, minúsculas, tildes y diéresis (por ejemplo, buscar *"ceviche"*, *"cebiche"*, *"aji"* o *"ají"* arroja resultados consistentes).
-* **Botón de Limpieza Rápida**: Control `✕` que borra el término de búsqueda de inmediato. También responde a la tecla `Escape`.
-* **Manejo de Estado Vacío**: Si ningún plato coincide con la búsqueda, se muestra una alerta visual accesible con un botón de reinicio (*"Restablecer carta"*) que recupera la vista completa en un solo clic.
+
+- **Filtrado Instantáneo**: Campo de texto que evalúa coincidencias conforme el usuario escribe, buscando sobre títulos de platos, descripciones, ingredientes y sugerencias de maridaje.
+- **Normalización Diacrítica (`String.prototype.normalize`)**: El motor de búsqueda ignora diferencias entre mayúsculas, minúsculas, tildes y diéresis (por ejemplo, buscar _"ceviche"_, _"cebiche"_, _"aji"_ o _"ají"_ arroja resultados consistentes).
+- **Botón de Limpieza Rápida**: Control `✕` que borra el término de búsqueda de inmediato. También responde a la tecla `Escape`.
+- **Manejo de Estado Vacío**: Si ningún plato coincide con la búsqueda, se muestra una alerta visual accesible con un botón de reinicio (_"Restablecer carta"_) que recupera la vista completa en un solo clic.
 
 #### C. Carrusel Automático de Platos Fuertes
-* **Avance Temporal Cíclico**: Desplazamiento automático cada **4.5 segundos** con rotación infinita (*wrap-around*), navegando entre páginas en escritorio y tarjetas individuales en dispositivos móviles.
-* **Controles Manuales**: Botones accesibles de avance y retroceso (`Anterior` / `Siguiente`) con etiquetas para lectores de pantalla (`aria-label`).
-* **Pausa Inteligente ante Interacción Humana**: El temporizador se detiene automáticamente cuando el cursor se sitúa sobre el carrusel (`mouseenter`), cuando un usuario navega por teclado (`focusin`), durante gestos táctiles en pantallas móviles (`touchstart`) o cuando la pestaña del navegador pasa a segundo plano (`visibilitychange`).
-* **Respeto a la Preferencia del Usuario**: Detecta si el sistema operativo tiene activada la opción de reducción de movimiento (`prefers-reduced-motion`) y desactiva el avance automático en conformidad con las pautas de accesibilidad WCAG.
+
+- **Avance Temporal Cíclico**: Desplazamiento automático cada **4.5 segundos** con rotación infinita (_wrap-around_), navegando entre páginas en escritorio y tarjetas individuales en dispositivos móviles.
+- **Controles Manuales**: Botones accesibles de avance y retroceso (`Anterior` / `Siguiente`) con etiquetas para lectores de pantalla (`aria-label`).
+- **Pausa Inteligente ante Interacción Humana**: El temporizador se detiene automáticamente cuando el cursor se sitúa sobre el carrusel (`mouseenter`), cuando un usuario navega por teclado (`focusin`), durante gestos táctiles en pantallas móviles (`touchstart`) o cuando la pestaña del navegador pasa a segundo plano (`visibilitychange`).
+- **Respeto a la Preferencia del Usuario**: Detecta si el sistema operativo tiene activada la opción de reducción de movimiento (`prefers-reduced-motion`) y desactiva el avance automático en conformidad con las pautas de accesibilidad WCAG.
 
 #### D. Modal de Recomendación del Sommelier
-* **Ventana Emergente Nativa (`<dialog>`)**: Ventana modal semántica activada desde el banner destacado de la carta.
-* **Contenido Especializado**: Ficha de maridaje con notas de cata del vino insignia (*Intipalka N° 1*) y sugerencia de plato principal (*Lomo Saltado al Pisco Queirolo*).
-* **Comportamiento Accesible**:
-  * Cierre por triple vía: botón circular de salida (`✕`), pulsación de la tecla `Escape` o clic directo sobre el fondo semitransparente (*backdrop*).
-  * Retención de foco (*focus trap*) mientras el modal está abierto y devolución del foco al botón detonador al cerrarse.
-  * Bloqueo de desplazamiento del fondo (`document.body.style.overflow = 'hidden'`) para impedir scroll accidental en la página principal.
-  * Botón de acción directa que redirige al formulario de reservas con la sugerencia preseleccionada.
+
+- **Ventana Emergente Nativa (`<dialog>`)**: Ventana modal semántica activada desde el banner destacado de la carta.
+- **Contenido Especializado**: Ficha de maridaje con notas de cata del vino insignia (_Intipalka N° 1_) y sugerencia de plato principal (_Lomo Saltado al Pisco Queirolo_).
+- **Comportamiento Accesible**:
+  - Cierre por triple vía: botón circular de salida (`✕`), pulsación de la tecla `Escape` o clic directo sobre el fondo semitransparente (_backdrop_).
+  - Retención de foco (_focus trap_) mientras el modal está abierto y devolución del foco al botón detonador al cerrarse.
+  - Bloqueo de desplazamiento del fondo (`document.body.style.overflow = 'hidden'`) para impedir scroll accidental en la página principal.
+  - Botón de acción directa que redirige al formulario de reservas con la sugerencia preseleccionada.
 
 ---
 
 ### 3.3. Sistema de Solicitud de Reservaciones (`reserva.html`)
 
-* **Formulario Estructurado y Semántico**:
-  * Datos del titular: Nombre completo, correo electrónico y número de teléfono.
-  * Parámetros de visita: Fecha de reserva, turno de atención (Almuerzo o Cena) y número de comensales.
-  * Selección de Ambiente: Salón Principal Barricas, Terraza con Vista a Viñedos o Cava Privada de Degustación.
-  * Requerimientos especiales: Área de texto para observaciones, alergias o solicitudes de celebración.
-* **Validación Rigurosa en Tiempo Real (`validacion.js`)**:
-  * **Protección contra fechas pasadas**: El selector de fecha bloquea dinámicamente cualquier fecha anterior al día en curso mediante cálculo del atributo `min`.
-  * **Formato de Contacto**: Validación de teléfono nacional o internacional con un mínimo estricto de 9 dígitos numéricos y comprobación de sintaxis de correo electrónico mediante expresión regular RFC 5322.
-  * **Validación de Nombres**: Verificación de longitud mínima (3 caracteres) para evitar envíos con iniciales o campos truncados.
-  * **Feedback Visual Inmediato**: Mensajes de error claros e interactivos integrados en cada campo mediante la API de validación nativa (`setCustomValidity`).
-* **Envío Seguro**: Al superar todas las validaciones, los datos se transmiten ordenadamente hacia la vista de confirmación.
+- **Formulario Estructurado y Semántico**:
+  - Datos del titular: Nombre completo, correo electrónico y número de teléfono.
+  - Parámetros de visita: Fecha de reserva, turno de atención (Almuerzo o Cena) y número de comensales.
+  - Selección de Ambiente: Salón Principal Barricas, Terraza con Vista a Viñedos o Cava Privada de Degustación.
+  - Requerimientos especiales: Área de texto para observaciones, alergias o solicitudes de celebración.
+- **Validación Rigurosa en Tiempo Real (`validacion.js`)**:
+  - **Protección contra fechas pasadas**: El selector de fecha bloquea dinámicamente cualquier fecha anterior al día en curso mediante cálculo del atributo `min`.
+  - **Formato de Contacto**: Validación de teléfono nacional o internacional con un mínimo estricto de 9 dígitos numéricos y comprobación de sintaxis de correo electrónico mediante expresión regular RFC 5322.
+  - **Validación de Nombres**: Verificación de longitud mínima (3 caracteres) para evitar envíos con iniciales o campos truncados.
+  - **Feedback Visual Inmediato**: Mensajes de error claros e interactivos integrados en cada campo mediante la API de validación nativa (`setCustomValidity`).
+- **Envío Seguro**: Al superar todas las validaciones, los datos se transmiten ordenadamente hacia la vista de confirmación.
 
 ---
 
 ### 3.4. Emisión de Comprobante / Ticket Digital (`confirmacion.html`)
 
-* **Extracción Segura de Parámetros (`URLSearchParams`)**: Lectura de los datos remitidos desde el formulario de reserva sin almacenamiento inseguro en almacenamiento local o cookies.
-* **Generación de Ticket Único**: Creación programática de un código de reservación alfanumérico irrepetible (formato `#INT-XXXXX`).
-* **Mitigación Estricta de Vulnerabilidades XSS**: Todos los valores ingresados por el usuario (nombres, fechas, zona, notas) se inyectan en el DOM utilizando exclusivamente la propiedad `textContent`, neutralizando cualquier intento de inyección de código malicioso o marcado HTML.
-* **Diseño Tipo Comprobante Gastronómico**: Presentación formal tipo tarjeta de embarque / ticket de servicio con desglose de fecha formateada en lenguaje natural, comensales y turno seleccionado.
-* **Acciones de Usuario**:
-  * Botón de **Impresión / Descarga PDF**: Dispara el diálogo de impresión del navegador (`window.print()`) con estilos optimizados para papel.
-  * Botón de **Retorno al Inicio**: Redirección rápida a la portada principal.
+- **Extracción Segura de Parámetros (`URLSearchParams`)**: Lectura de los datos remitidos desde el formulario de reserva sin almacenamiento inseguro en almacenamiento local o cookies.
+- **Generación de Ticket Único**: Creación programática de un código de reservación alfanumérico irrepetible (formato `#INT-XXXXX`).
+- **Mitigación Estricta de Vulnerabilidades XSS**: Todos los valores ingresados por el usuario (nombres, fechas, zona, notas) se inyectan en el DOM utilizando exclusivamente la propiedad `textContent`, neutralizando cualquier intento de inyección de código malicioso o marcado HTML.
+- **Diseño Tipo Comprobante Gastronómico**: Presentación formal tipo tarjeta de embarque / ticket de servicio con desglose de fecha formateada en lenguaje natural, comensales y turno seleccionado.
+- **Acciones de Usuario**:
+  - Botón de **Impresión / Descarga PDF**: Dispara el diálogo de impresión del navegador (`window.print()`) con estilos optimizados para papel.
+  - Botón de **Retorno al Inicio**: Redirección rápida a la portada principal.
 
 ---
 
@@ -150,15 +153,12 @@ AV2 - Intipalka/
     │   ├── contacto.css               # Estilos de la sección de contacto, horarios y mapa
     │   └── confirmacion.css           # Estilos del comprobante digital y ticket de reserva
     ├── js/
-    │   ├── carrusel.js                # Lógica del carrusel: autoplay, wrap-around y pausa inteligente
-    │   ├── menu-filtros.js            # Lógica de filtrado por categoría y buscador normalizado
-    │   ├── modal-destacado.js         # Lógica accesible del elemento <dialog> del Sommelier
-    │   ├── validacion.js              # Validación personalizada del formulario de reservas
-    │   └── confirmacion.js            # Procesamiento de URLSearchParams y renderizado anti-XSS
-    └── docs/
-        ├── Estructura Intipalka.docx  # Requerimientos base de la asignación académica
-        ├── README.md                  # Documentación técnica empaquetada para el entregable
-        └── specs/                     # Especificaciones formales de desarrollo (SDD)
+        ├── carrusel.js                # Lógica del carrusel: autoplay, wrap-around y pausa inteligente
+        ├── menu-filtros.js            # Lógica de filtrado por categoría y buscador normalizado
+        ├── modal-destacado.js         # Lógica accesible del elemento <dialog> del Sommelier
+        ├── validacion.js              # Validación personalizada del formulario de reservas
+        └── confirmacion.js            # Procesamiento de URLSearchParams y renderizado anti-XSS
+
 ```
 
 ---
@@ -169,14 +169,14 @@ AV2 - Intipalka/
    Se priorizó el uso de APIs nativas del navegador (ES6+, `URLSearchParams`, `<dialog>`, `matchMedia`, `Intl`) sin incurrir en librerías externas pesadas (jQuery, React o Bootstrap JS), maximizando la velocidad de carga y garantizando un control absoluto del ciclo de vida del DOM.
 
 2. **Accesibilidad Web (WCAG 2.1 Nivel AA)**:
-   * Contrastes cromáticos validados sobre paleta institucional (dorado `#d4af37`, vinotinto `#85182a` y fondos oscuros).
-   * Soporte completo de navegación por teclado en elementos interactivos (carrusel, pestañas de menú y modal).
-   * Uso de atributos y roles semánticos WAI-ARIA (`role="tablist"`, `role="tab"`, `aria-selected`, `aria-label`).
-   * Adaptación activa a la directiva de accesibilidad `prefers-reduced-motion`.
+   - Contrastes cromáticos validados sobre paleta institucional (dorado `#d4af37`, vinotinto `#85182a` y fondos oscuros).
+   - Soporte completo de navegación por teclado en elementos interactivos (carrusel, pestañas de menú y modal).
+   - Uso de atributos y roles semánticos WAI-ARIA (`role="tablist"`, `role="tab"`, `aria-selected`, `aria-label`).
+   - Adaptación activa a la directiva de accesibilidad `prefers-reduced-motion`.
 
 3. **Seguridad Front-End**:
-   * Mitigación de Cross-Site Scripting (XSS) al inyectar parámetros de URL mediante `.textContent`.
-   * Enlaces externos con directivas de seguridad `rel="noopener noreferrer"`.
+   - Mitigación de Cross-Site Scripting (XSS) al inyectar parámetros de URL mediante `.textContent`.
+   - Enlaces externos con directivas de seguridad `rel="noopener noreferrer"`.
 
 ---
 
@@ -185,6 +185,7 @@ AV2 - Intipalka/
 Para visualizar y evaluar el proyecto en un entorno local, se recomienda utilizar un servidor web local para garantizar el funcionamiento correcto de rutas relativas y módulos:
 
 ### Método 1: Visual Studio Code con Live Server (Recomendado)
+
 1. Abrir la carpeta del proyecto en **Visual Studio Code**:
    ```bash
    code .
@@ -197,17 +198,23 @@ Para visualizar y evaluar el proyecto en un entorno local, se recomienda utiliza
    ```
 
 ### Método 2: Servidor Local con Python
+
 Si cuenta con Python 3 instalado, ejecute desde la terminal en la raíz del proyecto:
+
 ```bash
 python -m http.server 5501
 ```
+
 Luego ingrese a: `http://localhost:5501/Intipalka/index.html`
 
 ### Método 3: Servidor Local con Node.js
+
 Si dispone de Node.js, puede inicializar un servidor ligero mediante:
+
 ```bash
 npx serve . -p 5501
 ```
+
 Luego ingrese a: `http://localhost:5501/Intipalka/index.html`
 
 ---
